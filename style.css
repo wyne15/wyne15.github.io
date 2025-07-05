@@ -1,0 +1,81 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Great Vibes', cursive;
+  background-image: url('floral_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.envelope {
+  width: 60%;
+  max-width: 400px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.envelope:hover {
+  transform: scale(1.05);
+}
+
+.subtext {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #5c4033;
+}
+
+.invitation-details {
+  padding: 30px;
+  text-align: center;
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+.culori-dresscode {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.culoare {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #333;
+}
+
+.babyblue { background-color: #a7c7e7; }
+.lightgreen { background-color: #ccf5cc; }
+.lightyellow { background-color: #fffcc4; }
+.babypink { background-color: #ffd1dc; }
+.red { background-color: #ff4d4d; }
+
+.butoane a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #fff;
+  border: 2px solid #c8b38e;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #3e2f1c;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.butoane a:hover {
+  background-color: #f3e8d5;
+}
