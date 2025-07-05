@@ -1,4 +1,4 @@
-/* General */
+/* === General Styling === */
 body, html {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body, html {
   overflow-x: hidden;
 }
 
-/* Container central pentru pagina 1 */
+/* === Pagina 1 - Plic === */
 .container {
   display: flex;
   flex-direction: column;
@@ -22,31 +22,29 @@ body, html {
   padding: 20px;
 }
 
-/* Text de sub plic */
-.intro-text {
+.subtext {
   font-size: 1.4em;
   color: #4B2E2E;
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
   z-index: 2;
 }
 
-/* Stil plic */
 .envelope {
   position: relative;
+  width: 60%;
+  max-width: 380px;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
   z-index: 10;
 }
 
-.envelope  {
-  width: 70%;
-  max-width: 350px;
+.envelope img {
+  width: 100%;
   height: auto;
-  margin: 20px auto;
-  cursor: pointer;
-  transition: transform 0.4s ease-in-out;
 }
 
-.envelope.deschidere  {
+.envelope.deschidere img {
   animation: deschidereAnimatie 0.8s ease-in-out forwards;
 }
 
@@ -61,22 +59,21 @@ body, html {
   }
 }
 
-/* Stil pentru pagina 2 */
+/* === Pagina 2 - Detalii Nuntă === */
 .pagina2 {
   text-align: center;
   padding: 20px;
-  font-family: 'Georgia', serif;
   color: #4a2d2a;
+  font-family: 'Georgia', serif;
 }
 
-/* Text detalii invitație */
 .invitation-details p {
   font-weight: bold;
   font-size: 18px;
   margin: 15px 0;
 }
 
-/* Dress Code */
+/* === Dress Code Circles === */
 .culori-dresscode {
   display: flex;
   justify-content: center;
@@ -97,7 +94,7 @@ body, html {
 .culoare:nth-child(4) { background-color: #ffb6c1; } /* baby pink */
 .culoare:nth-child(5) { background-color: #d9534f; } /* red */
 
-/* Butoane */
+/* === Butoane de locație și RSVP === */
 .butoane {
   display: flex;
   flex-direction: column;
@@ -131,7 +128,7 @@ body, html {
   background-color: #fcefe9;
 }
 
-/* Petale reale */
+/* === Petale Realiste Animate === */
 .petale {
   position: fixed;
   width: 100%;
@@ -156,5 +153,21 @@ body, html {
   }
   100% {
     transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* === Fonturi media === */
+@media (max-width: 480px) {
+  .subtext {
+    font-size: 1.1em;
+  }
+
+  .invitation-details p {
+    font-size: 16px;
+  }
+
+  .culoare {
+    width: 20px;
+    height: 20px;
   }
 }
