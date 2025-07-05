@@ -1,1 +1,0 @@
-# wyne15.github.io
