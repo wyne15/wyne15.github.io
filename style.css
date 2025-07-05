@@ -38,11 +38,12 @@ body, html {
 }
 
 .envelope img {
-  width: 100%;
-  max-width: 320px;
+  width: 60%;
+  max-width: 400px;
   height: auto;
+  margin: 20px auto;
   cursor: pointer;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .envelope.deschidere img {
