@@ -37,16 +37,16 @@ body, html {
   z-index: 10;
 }
 
-.envelope img {
-  width: 60%;
-  max-width: 400px;
+.envelope  {
+  width: 70%;
+  max-width: 350px;
   height: auto;
   margin: 20px auto;
   cursor: pointer;
   transition: transform 0.4s ease-in-out;
 }
 
-.envelope.deschidere img {
+.envelope.deschidere  {
   animation: deschidereAnimatie 0.8s ease-in-out forwards;
 }
 
