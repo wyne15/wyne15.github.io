@@ -1,81 +1,159 @@
-
+/* General */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Great Vibes', cursive;
+  height: 100%;
+  font-family: 'Georgia', serif;
   background-image: url('floral_bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
   overflow-x: hidden;
 }
 
+/* Container central pentru pagina 1 */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
+  padding: 20px;
 }
 
-.envelope {
-  width: 60%;
-  max-width: 400px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.envelope:hover {
-  transform: scale(1.05);
-}
-
-.subtext {
-  margin-top: 20px;
-  font-size: 1.5rem;
-  color: #5c4033;
-}
-
-.invitation-details {
-  padding: 30px;
-  text-align: center;
-  color: #2e2e2e;
+/* Text de sub plic */
+.intro-text {
+  font-size: 1.4em;
+  color: #4B2E2E;
+  margin-top: 10px;
   font-weight: bold;
+  z-index: 2;
 }
 
+/* Stil plic */
+.envelope {
+  position: relative;
+  z-index: 10;
+}
+
+.envelope img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.6s ease-in-out;
+}
+
+.envelope.deschidere img {
+  animation: deschidereAnimatie 0.8s ease-in-out forwards;
+}
+
+@keyframes deschidereAnimatie {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+}
+
+/* Stil pentru pagina 2 */
+.pagina2 {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Georgia', serif;
+  color: #4a2d2a;
+}
+
+/* Text detalii invitație */
+.invitation-details p {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+/* Dress Code */
 .culori-dresscode {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
-  gap: 10px;
+  gap: 15px;
+  margin: 10px 0 25px;
 }
 
 .culoare {
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  display: inline-block;
-  border: 1px solid #333;
+  border: 2px solid #333;
 }
 
-.babyblue { background-color: #a7c7e7; }
-.lightgreen { background-color: #ccf5cc; }
-.lightyellow { background-color: #fffcc4; }
-.babypink { background-color: #ffd1dc; }
-.red { background-color: #ff4d4d; }
+.culoare:nth-child(1) { background-color: #add8e6; } /* baby blue */
+.culoare:nth-child(2) { background-color: #90ee90; } /* light green */
+.culoare:nth-child(3) { background-color: #ffff99; } /* light yellow */
+.culoare:nth-child(4) { background-color: #ffb6c1; } /* baby pink */
+.culoare:nth-child(5) { background-color: #d9534f; } /* red */
 
-.butoane a {
-  display: inline-block;
-  margin: 10px;
+/* Butoane */
+.butoane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+@media (min-width: 600px) {
+  .butoane {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+.buton {
+  background-color: #f5e6d5;
+  border: 2px solid #c99;
+  border-radius: 12px;
   padding: 12px 20px;
-  background: #fff;
-  border: 2px solid #c8b38e;
-  border-radius: 30px;
   text-decoration: none;
-  color: #3e2f1c;
   font-weight: bold;
-  transition: 0.3s ease;
+  color: #5a3e36;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
 }
-.butoane a:hover {
-  background-color: #f3e8d5;
+
+.buton:hover {
+  background-color: #fcefe9;
+}
+
+/* Petale reale */
+.petale {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.petale img {
+  position: absolute;
+  width: 40px;
+  animation: cadere 10s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes cadere {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
 }
