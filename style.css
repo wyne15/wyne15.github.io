@@ -1,9 +1,9 @@
-/* === General Styling === */
+/* GENERAL SETTINGS */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Georgia', serif;
+  font-family: 'Great Vibes', cursive;
   background-image: url('floral_bg.png');
   background-size: cover;
   background-position: center;
@@ -11,7 +11,9 @@ body, html {
   overflow-x: hidden;
 }
 
-/* === Pagina 1 - Plic === */
+/* ---------- PAGINA 1 ---------- */
+
+/* Container central */
 .container {
   display: flex;
   flex-direction: column;
@@ -22,26 +24,28 @@ body, html {
   padding: 20px;
 }
 
-.subtext {
-  font-size: 1.4em;
+/* Text sub plic */
+.intro-text {
+  font-size: 1.5em;
   color: #4B2E2E;
-  margin-top: 15px;
   font-weight: bold;
-  z-index: 2;
+  margin-top: 20px;
+  font-family: 'Great Vibes', cursive;
 }
 
+/* Stil pentru plic */
 .envelope {
   position: relative;
-  width: 60%;
-  max-width: 380px;
-  cursor: pointer;
-  transition: transform 0.4s ease-in-out;
   z-index: 10;
 }
 
 .envelope img {
-  width: 100%;
+  width: 85%;
+  max-width: 500px;
   height: auto;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .envelope.deschidere img {
@@ -59,21 +63,22 @@ body, html {
   }
 }
 
-/* === Pagina 2 - Detalii Nuntă === */
+/* ---------- PAGINA 2 ---------- */
+
 .pagina2 {
   text-align: center;
   padding: 20px;
-  color: #4a2d2a;
   font-family: 'Georgia', serif;
+  color: #4a2d2a;
 }
 
 .invitation-details p {
   font-weight: bold;
-  font-size: 18px;
-  margin: 15px 0;
+  font-size: 20px;
+  margin: 18px 0;
 }
 
-/* === Dress Code Circles === */
+/* Dress code - culori pastelate nude */
 .culori-dresscode {
   display: flex;
   justify-content: center;
@@ -82,24 +87,24 @@ body, html {
 }
 
 .culoare {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   border: 2px solid #333;
 }
 
-.culoare:nth-child(1) { background-color: #add8e6; } /* baby blue */
-.culoare:nth-child(2) { background-color: #90ee90; } /* light green */
-.culoare:nth-child(3) { background-color: #ffff99; } /* light yellow */
-.culoare:nth-child(4) { background-color: #ffb6c1; } /* baby pink */
-.culoare:nth-child(5) { background-color: #d9534f; } /* red */
+.culoare.babyblue { background-color: #cce7f5; }
+.culoare.lightgreen { background-color: #d2f1d2; }
+.culoare.lightyellow { background-color: #fdf7c3; }
+.culoare.babypink { background-color: #fcd6e0; }
+.culoare.red { background-color: #d9534f; }
 
-/* === Butoane de locație și RSVP === */
+/* Butoane de locație și confirmare */
 .butoane {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
   margin-top: 30px;
 }
 
@@ -107,12 +112,11 @@ body, html {
   .butoane {
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
   }
 }
 
-.buton {
+.btn {
   background-color: #f5e6d5;
   border: 2px solid #c99;
   border-radius: 12px;
@@ -124,11 +128,11 @@ body, html {
   transition: background-color 0.3s ease;
 }
 
-.buton:hover {
+.btn:hover {
   background-color: #fcefe9;
 }
 
-/* === Petale Realiste Animate === */
+/* Petale reale animate */
 .petale {
   position: fixed;
   width: 100%;
@@ -156,18 +160,23 @@ body, html {
   }
 }
 
-/* === Fonturi media === */
-@media (max-width: 480px) {
-  .subtext {
-    font-size: 1.1em;
-  }
+/* Link preview pentru rețele sociale */
+meta[property="og:title"] {
+  content: "Andrian & Iulia – Invitație la nuntă";
+}
 
-  .invitation-details p {
-    font-size: 16px;
-  }
+meta[property="og:description"] {
+  content: "O poveste de iubire... sigilată cu emoție. Deschide și descoperă magia!";
+}
 
-  .culoare {
-    width: 20px;
-    height: 20px;
-  }
+meta[property="og:image"] {
+  content: "https://yourdomain.com/preview.jpg";
+}
+
+meta[property="og:url"] {
+  content: "https://yourdomain.com/index.html";
+}
+
+meta[property="og:type"] {
+  content: "website";
 }
