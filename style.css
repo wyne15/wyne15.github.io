@@ -1,17 +1,33 @@
-/* GENERAL SETTINGS */
+/* Import fonturi elegante */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&display=swap');
+
+/* General */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Great Vibes', cursive;
-  background-image: url('floral_bg.png');
+  font-family: 'Playfair Display', serif;
+  background-image: url('floral_bg.png'); /* imaginea florală trebuie să existe în folder */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow-x: hidden;
+  text-align: center;
 }
 
-/* ---------- PAGINA 1 ---------- */
+/* Stil text elegant, curbat */
+h1, h2, h3, p {
+  font-family: 'Playfair Display', serif;
+  color: #4B2E2E;
+  margin: 10px 0;
+}
+
+.curved-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8em;
+  color: #4B2E2E;
+  margin-bottom: 10px;
+}
 
 /* Container central */
 .container {
@@ -20,32 +36,24 @@ body, html {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  text-align: center;
   padding: 20px;
 }
 
-/* Text sub plic */
-.intro-text {
-  font-size: 1.5em;
-  color: #4B2E2E;
-  font-weight: bold;
-  margin-top: 20px;
-  font-family: 'Great Vibes', cursive;
-}
-
-/* Stil pentru plic */
+/* Plic animat și mărit */
 .envelope {
   position: relative;
   z-index: 10;
+  width: 85%; /* plic mai mare */
+  max-width: 600px;
+  margin: 20px auto;
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .envelope img {
-  width: 85%;
-  max-width: 500px;
+  width: 100%;
   height: auto;
-  margin: 20px auto;
-  cursor: pointer;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  display: block;
 }
 
 .envelope.deschidere img {
@@ -53,58 +61,56 @@ body, html {
 }
 
 @keyframes deschidereAnimatie {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.05);
-    opacity: 0;
-  }
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.1); opacity: 0; }
 }
 
-/* ---------- PAGINA 2 ---------- */
+/* Text de sub plic */
+.subtext {
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
 
+/* Pagina 2 – conținut */
 .pagina2 {
-  text-align: center;
   padding: 20px;
-  font-family: 'Georgia', serif;
   color: #4a2d2a;
 }
 
-.invitation-details p {
-  font-weight: bold;
-  font-size: 20px;
-  margin: 18px 0;
+.invitation-details {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
-/* Dress code - culori pastelate nude */
+/* Dress Code - cercuri nude */
 .culori-dresscode {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin: 10px 0 25px;
+  gap: 12px;
+  margin: 20px 0;
 }
 
 .culoare {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  border: 2px solid #333;
+  border: 1.5px solid #444;
 }
 
-.culoare.babyblue { background-color: #cce7f5; }
-.culoare.lightgreen { background-color: #d2f1d2; }
-.culoare.lightyellow { background-color: #fdf7c3; }
-.culoare.babypink { background-color: #fcd6e0; }
-.culoare.red { background-color: #d9534f; }
+.culoare:nth-child(1) { background-color: #d8cfc4; } /* nude */
+.culoare:nth-child(2) { background-color: #e2d6cf; } /* nude-roz */
+.culoare:nth-child(3) { background-color: #f5e4cc; } /* nude-bej */
+.culoare:nth-child(4) { background-color: #efd3d3; } /* pastel pink */
+.culoare:nth-child(5) { background-color: #d79988; } /* roșu cald nude */
 
-/* Butoane de locație și confirmare */
+/* Butoane elegante */
 .butoane {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
   margin-top: 30px;
 }
 
@@ -116,23 +122,24 @@ body, html {
   }
 }
 
-.btn {
-  background-color: #f5e6d5;
-  border: 2px solid #c99;
+.buton {
+  background-color: #fceee0;
+  border: 2px solid #c9a88c;
   border-radius: 12px;
   padding: 12px 20px;
   text-decoration: none;
   font-weight: bold;
   color: #5a3e36;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  font-family: 'Playfair Display', serif;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #fcefe9;
+.buton:hover {
+  background-color: #f5d8c2;
 }
 
-/* Petale reale animate */
+/* Petale animate */
 .petale {
   position: fixed;
   width: 100%;
@@ -147,8 +154,8 @@ body, html {
 .petale img {
   position: absolute;
   width: 40px;
-  animation: cadere 10s linear infinite;
   opacity: 0.8;
+  animation: cadere 10s linear infinite;
 }
 
 @keyframes cadere {
@@ -160,23 +167,7 @@ body, html {
   }
 }
 
-/* Link preview pentru rețele sociale */
-meta[property="og:title"] {
-  content: "Andrian & Iulia – Invitație la nuntă";
-}
-
-meta[property="og:description"] {
-  content: "O poveste de iubire... sigilată cu emoție. Deschide și descoperă magia!";
-}
-
-meta[property="og:image"] {
-  content: "https://yourdomain.com/preview.jpg";
-}
-
-meta[property="og:url"] {
-  content: "https://yourdomain.com/index.html";
-}
-
-meta[property="og:type"] {
-  content: "website";
+/* Muzică (ascuns) */
+audio {
+  display: none;
 }
