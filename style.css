@@ -143,7 +143,7 @@ h2 {
 }
 
 .envelope {
-  width: 380px;
+  width: 400px;
   max-width: 80%;
   transition: transform 0.4s ease;
   cursor: pointer;
