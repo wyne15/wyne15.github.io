@@ -48,6 +48,7 @@ audio {
   font-style: 'Parisienne', cursive;
   line-height: 1.6;
   font-size: 18px;
+  font-weight: bold;
   margin: 20px auto;
   max-width: 95%;
   text-align: center;
@@ -71,6 +72,7 @@ h2 {
 /* === DETALII EVENIMENT === */
 .detalii {
   font-size: 18px;
+  font-weight: bold;
   margin: 15px 0 20px;
   line-height: 1.6;
 }
@@ -93,6 +95,7 @@ h2 {
 .dress-text,
 .flowers {
   font-size: 17px;
+  font-weight: bold;
   margin: 15px auto;
   max-width: 90%;
   line-height: 1.5;
